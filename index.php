@@ -13,12 +13,17 @@ $MOD_NEEDCACHE_NAME=array("index.html",".password","HEAD.md","README.md");
 //下载url超时时间（秒）
 $MOD_URL_TIMEOUT=3600-10;
 //代理名称
-$PROXY_NAME=array("关闭");
+$PROXY_NAME=array("关闭","代理","CDN");
 function proxyurl($url)
 {
 	$id=$_COOKIE["proxy"];
 	if (!isset($id)||$id==0)
 		return $url;
+	if ($id==1)
+		return "https://yourproxy/?url=".urlencode($url);
+	if ($id==2)
+		return "https://yourcdn".qcloudcdn($url,"yourkey");
+	//可自行添加
 	return $url;
 }
 //------------------------------------------------
