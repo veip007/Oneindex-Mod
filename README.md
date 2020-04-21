@@ -36,3 +36,5 @@ Onedrive Directory Index
 由于只改了filecache，缓存方式务必选择filecache。  
 由于缓存自动更新，请修改缓存过期时间为无穷大，比如233333333。  
 还有其它配置写在index.php前面。请用代码编辑器打开并修改。  
+
+## 前端垃圾，凑合着用吧，自行修改
