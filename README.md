@@ -1,6 +1,6 @@
 # OneIndex-MOD  
 Onedrive Directory Index  
-感谢downwa提供的Oneindex，此为自用改动版本。  
+改动自downwa提供的Oneindex，此为自用改动版本。  
 
 ## 改动内容  
 ### 适用情况  
@@ -24,7 +24,7 @@ Onedrive Directory Index
 防止加密文件夹子文件夹访问绕过。  
 
 ## 安装运行
-**请参考downwa的安装教程**
+**请参考downwa的安装教程**  
 <img width="658" alt="image" src="https://raw.githubusercontent.com/donwa/oneindex/files/images/install.gif">  
 
 ## 必要配置
