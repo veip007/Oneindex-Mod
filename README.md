@@ -19,6 +19,11 @@ Onedrive Directory Index
 新增了重新绑定账户功能，登录管理并访问?reauth或&reauth以重新安装（配置不变）。  
 ### 配置代理
 编辑index.php内的函数，函数参数为OneDrive直链，id为选择的代理序号，返回代理后的链接。
+#### 腾讯云cdn
+选择TypeA鉴权模式
+函数格式：qcloudcdn($url,key)
+返回内容：cdn的路径
+自己看示例
 
 ### 期望增加的功能  
 防止加密文件夹子文件夹访问绕过。  
