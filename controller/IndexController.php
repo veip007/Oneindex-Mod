@@ -21,7 +21,7 @@ class IndexController{
 		}
 		$this->url_path = get_absolute_path(join('/', $paths));
 		$this->path = get_absolute_path(config('onedrive_root').$this->url_path);
-		$this->visit_path = get_absolute_path(dirname($_SERVER["PHP_SELF"])."/".config("root_path")."/".$this->url_path.$this->name);
+		$this->visit_path = get_absolute_path(dirname($_SERVER["PHP_SELF"])."/".config("root_path")."/".$this->url_path).$this->name;
 		//获取文件夹下所有元素
 		$this->items = $this->items($this->path);
 	}
@@ -32,19 +32,19 @@ class IndexController{
 		if ($ADMIN && isset($_GET["refreshfile"]))
 		{
 			oneindex::refresh_file_cache(rawurldecode($this->path));//刷新缓存
-			header('Location: '.$this->visit_path);
-			die();	
+			header("Location:".$this->visit_path."?s");
+			die();
 		}
 		if ($ADMIN && isset($_GET["refreshcurrent"]))
 		{
 			oneindex::refresh_current_cache(rawurldecode($this->path));//刷新缓存
-			header('Location: '.$this->visit_path);
-			die();	
+			header("Location:".$this->visit_path."?s");
+			die();
 		}
 		if (isset($_GET["proxy"]))
 		{
 			setcookie("proxy",$_GET["proxy"],time()+60*60*24*30,dirname($_SERVER["PHP_SELF"]));
-			header('Location: '.$this->visit_path);
+			header("Location:".$this->visit_path."?s");
 			die();
 		}
 
