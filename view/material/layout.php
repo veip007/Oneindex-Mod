@@ -90,15 +90,18 @@
 <div class="bar">
 	<?php if ($ADMIN):?>
 	<div style="margin-top:20px">刷新缓存</div>
-	<div><a href="<?php echo $url."refreshcurrent" ?>">刷新目录</a></div>
-	<div><a href="<?php echo $url."refreshfile" ?>">刷新文件</a></div>
+	<form action="" method="get" id="refreshcurrent"><input type="hidden" name="refreshcurrent"></form>
+	<form action="" method="get" id="refreshfile"><input type="hidden" name="refreshfile"></form>
+	<div><a onclick="document.getElementById('refreshcurrent').submit()">刷新目录</a></div>
+	<div><a onclick="document.getElementById('refreshfile').submit()">刷新文件</a></div>
 	<?php endif;?>
 	<div style="margin-top:20px">代理开关</div>
 <?php
 	global $PROXY_NAME;
-	foreach ($PROXY_NAME as $id=>$name)
-		echo "<div><a href='".$url."proxy=$id'>$name</a></div>";
-?>
+	foreach ($PROXY_NAME as $id=>$name):?>
+		<form action="" method="get" id="proxy<?php echo $id;?>"><input type="hidden" name="proxy" value="<?php echo $id;?>"></form>
+		<div><a onclick="document.getElementById('proxy<?php echo $id;?>').submit()"><?php echo $name;?></a></div>
+<?php endforeach;?>
 </div>
 
 <body class="mdui-theme-primary-blue-grey mdui-theme-accent-blue">
