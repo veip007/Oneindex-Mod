@@ -204,7 +204,7 @@ class IndexController{
 			}
 		}
 		//否则直接跳转下载
-		header('Location: '.$item['downloadUrl']);
+		header('Location: '.proxyurl($item['downloadUrl']));
 	}
 	//缩略图
 	function thumbnail($item){
