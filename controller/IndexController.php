@@ -122,7 +122,7 @@ class IndexController{
 				if(!in_array($ext,$MOD_NEEDCACHE_EXT))
 				{
 					oneindex::refresh_current_cache($this->path);//刷新缓存
-					die("<form action='' method='".$_SERVER['REQUEST_METHOD']."' id='form'></form><javascript>var form = document.getElementById('form');form.submit();</javascript>");
+					die("<form action='' method='".$_SERVER['REQUEST_METHOD']."' id='form'></form><script>var form = document.getElementById('form');form.submit();</script>");
 				}
 			}
 			if(!is_null($_GET['t']) )//缩略图
