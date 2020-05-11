@@ -67,6 +67,7 @@
   // 消息提示
   <?php echo (isset($message) && !empty($message)) ? "mdui.snackbar({position: 'right-top', message: '{$message}'});" : '';?>
 </script>
+<div style="color:grey">Mod by Steven</div>
 </body>
 
 </html>
