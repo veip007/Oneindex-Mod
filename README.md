@@ -7,7 +7,7 @@ Onedrive Directory Index
 
 ## 安装运行
 **请参考downwa的安装教程**  
-<img width="658" alt="image" src="https://raw.githubusercontent.com/veip007/oneindex/files/images/install.gif">  
+![image](https://tvax1.sinaimg.cn/large/006rXXh5gy1geplmwxli8g30qe0nm1ky.gif)  
 
 ## 必要配置
 由于只改了filecache，缓存方式务必选择filecache。  
