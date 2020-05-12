@@ -123,7 +123,7 @@ get方式访问的时候展示：在```$MOD_SHOW_EXT```里面加上扩展名。�
 
 价格：新用户1T免费流量
 
-####查询Onedrive域名
+#### 查询Onedrive域名
 
 登录OneDrive，记下网址前面形如```xxx-my.sharepoint.com```的部分。
 
