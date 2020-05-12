@@ -18,7 +18,7 @@ Onedrive Directory Index
 
 安装与原版安装并无区别，绑定世纪互联账户:
 
-####·第一步：应用注册
+#### ·第一步：应用注册
 
 ![image](https://tva3.sinaimg.cn/large/006rXXh5gy1gepkyv8n6gj30gv09yq3m.jpg)
 
@@ -30,11 +30,11 @@ Onedrive Directory Index
 
 注册完就可以看到应用ID（客户端ID）了
 
-####·第二步：修改Oneindex代码
+#### ·第二步：修改Oneindex代码
 
 打开Oneindex的”index.php”文件。可以看到写着“世纪互联”后面的两行已经注释掉了。删掉注释即可。
 
-####·第三步：安装
+#### ·第三步：安装
 
 在安装页面把刚才申请的”ClientID”和”ClientSecret”填入即可。其它与原版安装并无差别，不再多加描述。
 
@@ -76,7 +76,7 @@ if ($id==4)
 	return "https://lxy.domain.com".qcloudcdn($url,"鉴权密钥");
 ```
 
-###其它配置
+### 其它配置
 get方式访问的时候展示：在```$MOD_SHOW_EXT```里面加上扩展名。（不会跳转到下载链接而是走oneindex的展示页面）
 
 把文件缓存到vps：在```$MOD_NEEDCACHE_EXT```里面加扩展名。
@@ -162,7 +162,7 @@ PS：当然你也可以反代```xxx-my.sharepoint.com /personal/xxxx/_layouts/15
 
 访问```https://自定义的域名/Onedrive文件路径```
 
-CDN部署方式
+·CDN部署方式
 
 所有cdn部署方式都相似，以腾讯云为例。
 
